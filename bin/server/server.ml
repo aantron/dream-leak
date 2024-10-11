@@ -5,6 +5,6 @@ let () =
           Lwt.return
             (Dream.response
                ~headers:[ ("Content-Type", "text/plain") ]
-               "On macOS I leak.\n"));
+               "On macOS I leak .\n"));
     ]
   |> Dream.logger |> Dream.run ~port:8080
