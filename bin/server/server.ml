@@ -1,4 +1,6 @@
 let () =
+  Printexc.record_backtrace true;
+
   Dream.router
     [
       Dream.get "/" (fun _ ->
@@ -7,4 +9,4 @@ let () =
                ~headers:[ ("Content-Type", "text/plain") ]
                "On macOS I leak .\n"));
     ]
-  |> Dream.run ~port:8080
+  |> Dream.run
